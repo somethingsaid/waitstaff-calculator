@@ -1,10 +1,19 @@
 angular.module('myApp', [])
 .controller('waitstaffController', function($scope) {
-	// Reset total earnings data
+	// Init/Reset total earnings data
     $scope.reset = function() {
-		$scope.earnings = {
-			mealCount: 0,
-			tipTotal: 0
+		$scope.data = {
+			/* Meal data */
+			mealPrice: null,
+			mealTaxPct: null,
+			mealTipPct: null,
+			mealSubTotal: 0.00,
+			mealTipDollar: 0.00,
+			mealTotal: 0.00,
+			/* Aggregate data */
+		    mealCount: 0.00,
+			tipTotal: 0.00,
+			avgTip: 0.00
 		}
 	}
 	$scope.reset();

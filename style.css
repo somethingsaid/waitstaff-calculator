@@ -68,4 +68,13 @@ label {
 input {
   margin-left: 30px; }
 
+span {
+  display: inline-block; }
+
+.error-msg {
+  color: #F44336; }
+
+tr, th, td {
+  text-align: right; }
+
 /* Media queries */
