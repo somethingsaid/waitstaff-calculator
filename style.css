@@ -17,11 +17,6 @@ body {
   float: left;
   padding: 15px; }
 
-.row:after {
-  content: "";
-  clear: both;
-  display: block; }
-
 /* Main declarations */
 h1, h2 {
   text-align: center; }
@@ -59,11 +54,11 @@ button {
   .submit:active {
     background-color: #0960a5; }
 
-.cancel {
+.clear {
   background-color: #F44336; }
-  .cancel:hover {
+  .clear:hover {
     background-color: #ea1c0d; }
-  .cancel:active {
+  .clear:active {
     background-color: #ba160a; }
 
 .reset {

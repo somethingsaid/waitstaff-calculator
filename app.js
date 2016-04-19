@@ -32,9 +32,7 @@ angular.module('myApp', [])
     		$scope.data.tipTotal = (($scope.data.tipTotal * 1) + ($scope.data.mealTipDollar * 1)).toFixed(2);
     		$scope.data.avgTip = ($scope.data.tipTotal / $scope.data.mealCount).toFixed(2);
     		/* Null out meal details in input */
-    		$scope.data.mealPrice = null;
-    		$scope.data.mealTaxPct = null;
-    		$scope.data.mealTipPct = null;
+    		$scope.clear();
     	}
     	else {
     		console.log("Missing data");
@@ -42,7 +40,7 @@ angular.module('myApp', [])
     }
 
     // Reset meal details
-    $scope.cancel = function() {
+    $scope.clear = function() {
     	$scope.data.mealPrice = null;
     	$scope.data.mealTaxPct = null;
     	$scope.data.mealTipPct = null;

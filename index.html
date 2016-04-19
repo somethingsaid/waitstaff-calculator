@@ -22,25 +22,25 @@
                     <form class="form" name="mealDetails" novalidate ng-submit="submit()">
                         <div class="form-component">
                             <label>Base meal price $</label>
-                            <input type="number" step="any" placeholder="0.00" min="0" ng-model="data.mealPrice" required/>
-                            <span class="error-msg" ng-if="mealDetails.$submitted && !mealDetails.$valid">Field is required
+                            <input type="number" name="mealPrice" step="any" placeholder="0.00" min="0" ng-model="data.mealPrice" required/>
+                            <span class="error-msg" ng-if="mealDetails.$submitted && mealDetails.mealPrice.$error.required">Field is required
                             </span>
                         </div>
                         <div class="form-component">
                             <label>Tax %</label>
-                            <input type="number" step="any" placeholder="0" min="0" ng-model="data.mealTaxPct" required/>
-                            <span class="error-msg" ng-if="mealDetails.$submitted && !mealDetails.$valid">Field is required
+                            <input type="number" name="mealTaxPct" step="any" placeholder="0" min="0" ng-model="data.mealTaxPct" required/>
+                            <span class="error-msg" ng-if="mealDetails.$submitted && mealDetails.mealTaxPct.$error.required">Field is required
                             </span>
                         </div>
                         <div class="form-component">
                             <label>Tip %</label>
-                            <input type="number" step="any" placeholder="0" min="0" ng-model="data.mealTipPct" required/>
-                            <span class="error-msg" ng-if="mealDetails.$submitted && !mealDetails.$valid">Field is required
+                            <input type="number" name="mealTipPct" step="any" placeholder="0" min="0" ng-model="data.mealTipPct" required/>
+                            <span class="error-msg" ng-if="mealDetails.$submitted && mealDetails.mealTipPct.$error.required">Field is required
                             </span>
                         </div>
                         <div class="form-buttons">
                             <button class="submit" type="submit" ng-click="submit()">Submit</button>
-                            <button class="cancel" type="button" ng-click="cancel()">Clear</button>
+                            <button class="clear" type="button" ng-click="clear()">Clear</button>
                         </div>
                     </form>
                 </section>
