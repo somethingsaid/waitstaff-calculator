@@ -1,0 +1,41 @@
+/* Variables */
+/* Standard declarations */
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body {
+  width: 85%;
+  margin: auto; }
+
+/* Main declarations */
+h1, h2 {
+  text-align: center; }
+
+.meal-details, .customer-charges, .total-earnings {
+  border: 1px solid #9E9E9E;
+  margin-bottom: 20px; }
+
+.title {
+  margin: 20px 0 10px 0; }
+
+.form {
+  border-top: 1px solid #9E9E9E; }
+
+.form-component:first-child {
+  margin-top: 5px; }
+
+.form-component {
+  margin-bottom: 10px; }
+
+label {
+  text-align: right;
+  width: 30%;
+  display: inline-block; }
+
+input {
+  margin-left: 30px; }
+
+/* Media queries */
