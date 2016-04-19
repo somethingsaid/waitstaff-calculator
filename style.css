@@ -23,12 +23,42 @@ h1, h2 {
 
 .form {
   border-top: 1px solid #9E9E9E; }
+  .form .form-component:first-child {
+    margin-top: 5px; }
+  .form .form-component {
+    margin-bottom: 10px; }
+  .form .form-buttons {
+    padding-right: 20px;
+    margin: auto;
+    text-align: right; }
 
-.form-component:first-child {
-  margin-top: 5px; }
+button {
+  color: white;
+  border: 1px solid #DCDCDC;
+  border-radius: 2px; }
+  button:focus {
+    outline: none; }
 
-.form-component {
-  margin-bottom: 10px; }
+.submit {
+  background-color: #2196F3; }
+  .submit:hover {
+    background-color: #0c7cd5; }
+  .submit:active {
+    background-color: #0960a5; }
+
+.cancel {
+  background-color: #F44336; }
+  .cancel:hover {
+    background-color: #ea1c0d; }
+  .cancel:active {
+    background-color: #ba160a; }
+
+.reset {
+  background-color: #FFC107; }
+  .reset:hover {
+    background-color: #d39e00; }
+  .reset:active {
+    background-color: #a07800; }
 
 label {
   text-align: right;
