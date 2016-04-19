@@ -15,72 +15,78 @@
   <body>
     <div class="container" ng-controller="waitstaffController">
         <h1 class="title">Waitstaff Calculator</h1>
-        <section class="meal-details">
-            <h2>Enter The Meal Details</h2>
-            <form class="form" name="mealDetails" novalidate ng-submit="submit()">
-                <div class="form-component">
-                    <label>Base meal price $</label>
-                    <input type="number" step="any" placeholder="0.00" min="0" ng-model="data.mealPrice" required/>
-                    <span class="error-msg" ng-if="mealDetails.$submitted && !mealDetails.$valid">Field is required
-                    </span>
-                </div>
-                <div class="form-component">
-                    <label>Tax %</label>
-                    <input type="number" step="any" placeholder="0" min="0" ng-model="data.mealTaxPct" required/>
-                    <span class="error-msg" ng-if="mealDetails.$submitted && !mealDetails.$valid">Field is required
-                    </span>
-                </div>
-                <div class="form-component">
-                    <label>Tip %</label>
-                    <input type="number" step="any" placeholder="0" min="0" ng-model="data.mealTipPct" required/>
-                    <span class="error-msg" ng-if="mealDetails.$submitted && !mealDetails.$valid">Field is required
-                    </span>
-                </div>
-                <div class="form-buttons">
-                    <button class="submit" type="submit" ng-click="submit()">Submit</button>
-                    <button class="cancel" type="button" ng-click="cancel()">Clear</button>
-                </div>
-            </form>
-        </section>
-        <section class="customer-charges">
-            <h2>Customer Charges</h2>
-            <table class="total-table">
-                <tr>
-                    <td><strong>Sub-total</strong></td>
-                    <td>$ {{ data.mealSubTotal }} </td>
-                </tr>
-                <tr>
-                    <td><strong>Tip</strong></td>
-                    <td>$ {{ data.mealTipDollar }} </td>
-                </tr>
-                <hr>
-                <tr>
-                    <td><strong>Total</strong></td>
-                    <td>$ {{ data.mealTotal }} </td>
-                </tr>
-            </table>
-        </section>
-        <section class="total-earnings">
-            <h2>Total Earnings</h2>
-            <table class="earnings-table">
-                <tr>
-                    <td><strong>Tip-total</strong></td>
-                    <td>$ {{ data.tipTotal }} </td>
-                </tr>
-                <tr>
-                    <td><strong>Meal Count</strong></td>
-                    <td>{{ data.mealCount }} </td>
-                </tr>
-                <hr>
-                <tr>
-                    <td><strong>Average Tip Per Meal</strong></td>
-                    <td>$ {{ data.avgTip }} </td>
-                </tr>
-            </table>
-            <div class="form-buttons">
-                <button class="reset" type="button" ng-click="reset()">Reset</button>
+        <div class="row">
+            <div class="col-12">                
+                <section class="meal-details">
+                    <h2>Enter The Meal Details</h2>
+                    <form class="form" name="mealDetails" novalidate ng-submit="submit()">
+                        <div class="form-component">
+                            <label>Base meal price $</label>
+                            <input type="number" step="any" placeholder="0.00" min="0" ng-model="data.mealPrice" required/>
+                            <span class="error-msg" ng-if="mealDetails.$submitted && !mealDetails.$valid">Field is required
+                            </span>
+                        </div>
+                        <div class="form-component">
+                            <label>Tax %</label>
+                            <input type="number" step="any" placeholder="0" min="0" ng-model="data.mealTaxPct" required/>
+                            <span class="error-msg" ng-if="mealDetails.$submitted && !mealDetails.$valid">Field is required
+                            </span>
+                        </div>
+                        <div class="form-component">
+                            <label>Tip %</label>
+                            <input type="number" step="any" placeholder="0" min="0" ng-model="data.mealTipPct" required/>
+                            <span class="error-msg" ng-if="mealDetails.$submitted && !mealDetails.$valid">Field is required
+                            </span>
+                        </div>
+                        <div class="form-buttons">
+                            <button class="submit" type="submit" ng-click="submit()">Submit</button>
+                            <button class="cancel" type="button" ng-click="cancel()">Clear</button>
+                        </div>
+                    </form>
+                </section>
             </div>
-        </section>
+            <div class="col-12">
+                <section class="customer-charges">
+                    <h2>Customer Charges</h2>
+                    <table class="total-table">
+                        <tr>
+                            <td><strong>Sub-total</strong></td>
+                            <td>$ {{ data.mealSubTotal }} </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tip</strong></td>
+                            <td>$ {{ data.mealTipDollar }} </td>
+                        </tr>
+                        <hr>
+                        <tr>
+                            <td><strong>Total</strong></td>
+                            <td>$ {{ data.mealTotal }} </td>
+                        </tr>
+                    </table>
+                </section>
+                <section class="total-earnings">
+                    <h2>Total Earnings</h2>
+                    <table class="earnings-table">
+                        <tr>
+                            <td><strong>Tip-total</strong></td>
+                            <td>$ {{ data.tipTotal }} </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Meal Count</strong></td>
+                            <td>{{ data.mealCount }} </td>
+                        </tr>
+                        <hr>
+                        <tr>
+                            <td><strong>Average Tip Per Meal</strong></td>
+                            <td>$ {{ data.avgTip }} </td>
+                        </tr>
+                    </table>
+                    <div class="form-buttons">
+                        <button class="reset" type="button" ng-click="reset()">Reset</button>
+                    </div>
+                </section>
+            </div>
+        </div>
 
     </div>
   </body>
