@@ -15,12 +15,14 @@ angular.module('myApp', [])
 		    mealCount: 0,
 			tipTotal: 0,
 			avgTip: 0,
+			submitted: false
 		};
 	}
 	$scope.reset();
 
     // Submit meal details
     $scope.submit = function() {
+    	$scope.data.submitted = true;
     	if ($scope.mealDetails.$valid) {
     		console.log("Valid!");
     		/* Calculated meal data */
@@ -44,5 +46,6 @@ angular.module('myApp', [])
     	$scope.data.mealPrice = null;
     	$scope.data.mealTaxPct = null;
     	$scope.data.mealTipPct = null;
+    	$scope.data.submitted = false;
     }
 });
