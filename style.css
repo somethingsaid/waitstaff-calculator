@@ -27,10 +27,11 @@ h1, h2 {
     margin-top: 5px; }
   .form .form-component {
     margin-bottom: 10px; }
-  .form .form-buttons {
-    padding-right: 20px;
-    margin: auto;
-    text-align: right; }
+
+.form-buttons {
+  padding-right: 20px;
+  margin: auto;
+  text-align: right; }
 
 button {
   color: white;
@@ -74,7 +75,15 @@ span {
 .error-msg {
   color: #F44336; }
 
-tr, th, td {
-  text-align: right; }
+table {
+  table-layout: fixed; }
+  table tr, table th, table td {
+    text-align: right; }
+  table td {
+    width: 200px;
+    margin: auto; }
 
 /* Media queries */
+@media screen and (min-width: 768px) {
+  body {
+    background-color: #FFFFF4; } }

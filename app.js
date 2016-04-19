@@ -7,14 +7,15 @@ angular.module('myApp', [])
 			mealPrice: null,
 			mealTaxPct: null,
 			mealTipPct: null,
-			mealSubTotal: 0.00,
-			mealTipDollar: 0.00,
-			mealTotal: 0.00,
+			/* Calculated meal data */
+			mealSubTotal: 0,
+			mealTipDollar: 0,
+			mealTotal: 0,
 			/* Aggregate data */
-		    mealCount: 0.00,
-			tipTotal: 0.00,
-			avgTip: 0.00
-		}
+		    mealCount: 0,
+			tipTotal: 0,
+			avgTip: 0,
+		};
 	}
 	$scope.reset();
 
@@ -22,9 +23,28 @@ angular.module('myApp', [])
     $scope.submit = function() {
     	if ($scope.mealDetails.$valid) {
     		console.log("Valid!");
+    		/* Calculated meal data */
+    		$scope.data.mealSubTotal = ($scope.data.mealPrice * (($scope.data.mealTaxPct / 100.00) + 1)).toFixed(2);
+    		$scope.data.mealTipDollar = (($scope.data.mealTipPct / 100) * $scope.data.mealPrice).toFixed(2);
+    		$scope.data.mealTotal = (($scope.data.mealSubTotal * 1) + ($scope.data.mealTipDollar * 1)).toFixed(2);
+    		/* Aggregate data */
+    		$scope.data.mealCount++;
+    		$scope.data.tipTotal = (($scope.data.tipTotal * 1) + ($scope.data.mealTipDollar * 1)).toFixed(2);
+    		$scope.data.avgTip = ($scope.data.tipTotal / $scope.data.mealCount).toFixed(2);
+    		/* Null out meal details in input */
+    		$scope.data.mealPrice = null;
+    		$scope.data.mealTaxPct = null;
+    		$scope.data.mealTipPct = null;
     	}
     	else {
     		console.log("Missing data");
     	}
+    }
+
+    // Reset meal details
+    $scope.cancel = function() {
+    	$scope.data.mealPrice = null;
+    	$scope.data.mealTaxPct = null;
+    	$scope.data.mealTipPct = null;
     }
 });
