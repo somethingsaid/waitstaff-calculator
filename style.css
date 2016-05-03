@@ -14,10 +14,14 @@ body {
 /* Setting up a grid */
 .col-12 {
   width: 100%;
-  float: left;
   padding: 15px; }
 
 /* Main declarations */
+.links {
+  width: 75%;
+  margin: auto;
+  text-align: center; }
+
 h1, h2 {
   text-align: center; }
 
@@ -95,4 +99,5 @@ table {
   body {
     background-color: #FFFFF4; }
   .col-12 {
-    width: 50%; } }
+    width: 50%;
+    margin: auto; } }

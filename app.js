@@ -1,4 +1,36 @@
-angular.module('myApp', [])
+angular.module('myApp', ['ngRoute'])
+.config(['$routeProvider', function($routeProvider){
+    $routeProvider.when('/', { //i.e, when user visits / (root), app should respond with home.html and HomeCtrl
+        templateUrl : 'home.html',
+        controller : 'homeCtrl'
+    })
+    .when('/new_meal', {
+        templateUrl : 'new_meal.html',
+        controller : 'mealCtrl'
+    })
+    .when('/my_earnings', {
+        templateUrl: 'my_earnings.html',
+        controller: 'earningsCtrl'
+    })
+    .when('/error', {
+        template: '<p>Error.  Page Not Found.</p>'
+    })
+    .otherwise('/error');
+}])
+.run(function($rootScope, $location) {
+    $rootScope.$on('$routeChangeError', function() {
+        $location.path('/error');
+    });
+})
+.controller('homeCtrl', ['$scope', function($scope) {
+    //empty for now
+}])
+.controller('mealCtrl', ['$scope', function($scope) {
+    //empty for now
+}])
+.controller('earningsCtrl', ['$scope', function($scope) {
+    //empty for now
+}])
 .controller('waitstaffController', function($scope) {
 	// Init/Reset total earnings data
     $scope.reset = function() {

@@ -1,0 +1,20 @@
+{
+  "name": "waitstaff_calculator",
+  "description": "waitstaff calculator",
+  "main": "app.js",
+  "authors": [
+    "Billy"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/somethingsaid/waitstaff-calculator",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "^1.5.5"
+  }
+}

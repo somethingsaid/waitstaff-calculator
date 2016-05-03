@@ -1,0 +1,25 @@
+<div class="row">        
+    <div class="col-12">
+        <section class="total-earnings">
+            <h2>Total Earnings</h2>
+            <table class="earnings-table">
+                <tr>
+                    <td><strong>Tip-total</strong></td>
+                    <td>$ {{ data.tipTotal }} </td>
+                </tr>
+                <tr>
+                    <td><strong>Meal Count</strong></td>
+                    <td>{{ data.mealCount }} </td>
+                </tr>
+                <hr>
+                <tr>
+                    <td><strong>Average Tip Per Meal</strong></td>
+                    <td>$ {{ data.avgTip }} </td>
+                </tr>
+            </table>
+            <div class="form-buttons">
+                <button class="reset" type="button" ng-click="reset()">Reset</button>
+            </div>
+        </section>
+    </div>
+</div>
