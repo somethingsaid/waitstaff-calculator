@@ -28,9 +28,9 @@ angular.module('myApp', ['ngRoute'])
 .controller('waitstaffController', ['$scope', '$rootScope', function($scope, $rootScope) {
     $scope.mealData = {
         //Meal Data
-        mealPrice: 0,
-        mealTaxPct: 0,
-        mealTipPct: 0,
+        mealPrice: null,
+        mealTaxPct: null,
+        mealTipPct: null,
         //Calculated meal data
         mealSubTotal: 0,
         mealTipDollar: 0,
