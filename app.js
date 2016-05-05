@@ -71,7 +71,6 @@ angular.module('myApp', ['ngRoute'])
         $scope.mealData.mealTipPct = null;
         $scope.mealData.submitted = false;
     };
-    $scope.clear();
 }])
 .controller('earningsCtrl', ['$scope', '$rootScope', function($scope, $rootScope) {
     // Init/Reset total earnings data
