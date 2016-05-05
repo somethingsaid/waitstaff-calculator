@@ -20,14 +20,6 @@ angular.module('myApp', ['ngRoute'])
 .run(function($rootScope, $location) {
     $rootScope.$on('$routeChangeError', function() {
         $location.path('/error');
-    $rootScope.$on('$routeChangeStart', function() {
-        $rootScope.isLoading = true;
-    });
-    $rootScope.$on('$routeChangeSuccess', function() {
-        // if not using timeout, change would be instantenous. we want to simulate loading state
-        $timeout(function() {
-            $rootScope.isLoading = false;
-        }, 1000);
     });
 })
 .controller('homeCtrl', ['$scope', function($scope) {
@@ -71,7 +63,6 @@ angular.module('myApp', ['ngRoute'])
             console.log("Missing data");
         }
     }
-
     // Reset meal details
     $scope.clear = function() {
         $scope.mealData.mealPrice = null;

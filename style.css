@@ -11,6 +11,21 @@ body {
   width: 95%;
   margin: auto; }
 
+/* Animating the ng-view */
+.container {
+  /*fade in and out effect. keeping declarations separate for clarity */ }
+  .container .animation.ng-enter,
+  .container .animation.ng-leave {
+    transition: 2s; }
+  .container .animation.ng-enter {
+    opacity: 0; }
+  .container .animation.ng-enter-active {
+    opacity: 1; }
+  .container .animation.ng-leave {
+    opacity: 1; }
+  .container .animation.ng-leave-active {
+    opacity: 0; }
+
 /* Setting up a grid */
 .col-12 {
   width: 100%;
