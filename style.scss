@@ -1,0 +1,173 @@
+/* Variables */
+$blue: #2196F3;
+$red: #F44336;
+$yellow: #FFC107;
+$grey: #9E9E9E;
+$basefont: "Lucida Sans", sans-serif;
+
+/* Standard declarations */
+html {
+  box-sizing: border-box;
+  font-family: $basefont;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+	width: 95%;
+	margin: auto;
+}
+
+/* Animating the ng-view */
+.container {
+	.animation.ng-enter,
+	.animation.ng-leave {
+	    transition:2s;
+	}
+	/*fade in and out effect. keeping declarations separate for clarity */
+	.animation.ng-enter {
+		opacity: 0;
+	}
+	.animation.ng-enter-active {
+		opacity: 1;
+	}
+	.animation.ng-leave {
+		opacity: 1;
+	}
+	.animation.ng-leave-active {
+		opacity: 0;
+	}
+}
+
+/* Setting up a grid */
+.col-12 {
+	width: 100%;
+	padding: 15px;
+}
+
+.explanation {
+	width: 75%;
+	margin: auto;
+	text-align: center;
+	ul {
+		list-style: none;
+	}
+}
+/* Main declarations */
+.links {
+	width: 75%;
+	margin: auto;
+	text-align: center;
+}
+h1, h2 {
+	text-align: center;
+}
+
+.meal-details, .customer-charges, .total-earnings {
+	border: 1px solid $grey;
+	margin-bottom: 20px;
+}
+
+.title {
+	margin: 20px 0 10px 0;
+}
+
+.form {
+	border-top: 1px solid $grey;
+	.form-component:first-child {
+	    margin-top: 5px;
+    }
+    .form-component {
+		margin-bottom: 10px;
+	}
+}
+
+.form-buttons {
+	padding-right: 20px;
+	margin: auto;
+	text-align: right;
+}
+
+button {
+	color: white;
+	border: 1px solid #DCDCDC;
+	border-radius: 2px;
+	&:focus {
+		outline: none;
+	}
+}
+
+.submit {
+	background-color: $blue;
+	&:hover {
+		background-color: darken($blue, 10%);
+	}
+	&:active {
+		background-color: darken($blue, 20%);
+	}
+}
+
+.clear {
+	background-color: $red;
+	&:hover {
+		background-color: darken($red, 10%);
+	}
+	&:active {
+		background-color: darken($red, 20%);
+	}
+}
+
+.reset {
+	background-color: $yellow;
+	&:hover {
+		background-color: darken($yellow, 10%);
+	}
+	&:active {
+		background-color: darken($yellow, 20%);
+	}
+}
+
+label {
+	text-align: right;
+	width: 30%;
+	display: inline-block;
+}
+
+input {
+	margin-left: 30px;
+}
+
+span {
+	display: inline-block;
+}
+
+.error-msg {
+	color: $red;
+}
+
+table {
+	table-layout: fixed;
+	tr, th, td {
+		text-align: right;
+	}
+
+	td {
+		width: 200px;
+		margin: auto;
+	}
+}
+
+/* Media queries */
+@media screen and (min-width: 768px) {
+	body {
+		background-color: #FFFFF4;
+	}
+
+	.col-12 {
+		width: 50%;
+		margin: auto;
+	}
+
+}
