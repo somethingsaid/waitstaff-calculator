@@ -16,7 +16,7 @@ body {
   /*fade in and out effect. keeping declarations separate for clarity */ }
   .container .animation.ng-enter,
   .container .animation.ng-leave {
-    transition: 2s linear all; }
+    transition: 2s; }
   .container .animation.ng-enter {
     opacity: 0; }
   .container .animation.ng-enter-active {
