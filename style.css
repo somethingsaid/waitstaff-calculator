@@ -13,16 +13,24 @@ body {
 
 /* Animating the ng-view */
 .container {
+  position: relative;
+  min-height: 100%;
   /*fade in and out effect. keeping declarations separate for clarity */ }
   .container .animation.ng-enter,
   .container .animation.ng-leave {
-    transition: 2s; }
+    position: relative; }
   .container .animation.ng-enter {
-    opacity: 0; }
+    transition: 1s linear all; }
+  .container .animation.ng-leave {
+    transition: 0.1s linear all; }
+  .container .animation.ng-enter {
+    opacity: 0;
+    z-index: 100; }
   .container .animation.ng-enter-active {
     opacity: 1; }
   .container .animation.ng-leave {
-    opacity: 1; }
+    opacity: 1;
+    z-index: 99; }
   .container .animation.ng-leave-active {
     opacity: 0; }
 

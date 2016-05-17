@@ -22,19 +22,29 @@ body {
 
 /* Animating the ng-view */
 .container {
+	position: relative;
+	min-height: 100%;
 	.animation.ng-enter,
 	.animation.ng-leave {
-	    transition:2s;
+        position: relative;
+	}
+	.animation.ng-enter {
+		transition: 1s linear all;
+	}
+	.animation.ng-leave {
+		transition: 0.1s linear all;
 	}
 	/*fade in and out effect. keeping declarations separate for clarity */
 	.animation.ng-enter {
 		opacity: 0;
+		z-index: 100;
 	}
 	.animation.ng-enter-active {
 		opacity: 1;
 	}
 	.animation.ng-leave {
 		opacity: 1;
+		z-index: 99;
 	}
 	.animation.ng-leave-active {
 		opacity: 0;
